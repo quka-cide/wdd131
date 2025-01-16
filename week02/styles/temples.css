@@ -68,9 +68,8 @@ nav {
 }
 
 main {
-    max-width: 1000px;
+    min-width: 512px;
     margin: 0 auto;
-    
 }
 
 main h2 {
@@ -82,12 +81,7 @@ main h2 {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
-    padding: 20px;
     place-items: center;
-}
-
-figure img {
-    max-width: 250px;
 }
 
 footer {

@@ -25,11 +25,13 @@
 
     .gallery {
         grid-template-columns: 1fr 1fr;
+        
     }
 }
 
 @media screen and (min-width: 1200px) {
     .gallery {
         grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
     }
 }
