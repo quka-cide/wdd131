@@ -1,0 +1,154 @@
+:root {
+    --blue: #004085;
+    --yellow: #FFDD00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", serif;
+}
+
+header {
+    font-size: 26px;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--blue);
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+picture {
+    padding: 20px 0 5px 0;
+    background-color: var(--yellow);
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+}
+
+.data {
+    border-bottom: 1px solid lightgray;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+}
+
+ul {
+    list-style: none;
+    padding: 20px 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.labels {
+    font-weight: 700;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.descriptions {
+    text-align: left;
+}
+
+section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.logo {
+    margin: 0 auto;
+    width: 100px;
+    height: auto;
+}
+
+footer {
+    background-color: var(--blue);
+    text-align: center;
+    padding: 2rem;
+    font-size: 18px;
+    color: white;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        font-size: 20px;
+        display: block;
+        position: relative;
+    }
+
+    picture {
+        display: block;
+        padding: 40px 0 0 0;
+    }
+
+    .data {
+        position: absolute;
+        top: 100px;
+        left: 50px;
+        border: none;
+        background-color: rgba(255, 255, 255, .7);
+        padding: 70px 20px 0 50px;
+    }
+
+    .weather {
+        padding-bottom: 0;
+        position: absolute;
+        bottom: 100px;
+        right: 50px;
+        background-color: rgba(255, 255, 255, .7);
+        padding: 70px 20px 0 50px;
+    }
+    
+    .logo {
+        display: none;
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+        background-color: var(--yellow);
+        text-align: left;
+        position: absolute;
+        top: 10px;
+        left: -20px;
+        background-color: rgba( 255, 221, 0, .7);
+        width: 100%;
+    }
+
+    .weather .heading::after {
+        content: "⛅";
+        position: absolute;
+        right: 20px;
+        font-size: 48px;
+    }
+
+    ul {
+        margin-top: 20px;
+    }
+}
