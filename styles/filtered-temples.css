@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: #3a86ff;
+    color: black;
+}
+
+nav {
+	margin: 1rem auto;
+}
+
+#menu {
+    font-size: 32px;
+    border: 0;
+    color: black;
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3a86ff;
+}
+
+.navigation a {
+    width: 150px;
+    display: none;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    color: black;
+    transition: .5s;
+}
+
+.navigation a:hover {
+    color: white;
+    background-color: black;
+}
+
+.open {
+    padding: 0;
+}
+
+.open a {
+    display: block;
+}
+
+main {
+    min-width: 512px;
+    margin: 0 auto;
+}
+
+main h2 {
+    margin: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    place-items: center;
+}
+
+.card {
+    background-color: lightgray;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 20px;
+    text-align: center;
+}
+
+.card ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.card .label {
+    color: purple;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 20px;
+    background-color: #3a86ff;
+}
