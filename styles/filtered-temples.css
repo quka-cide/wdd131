@@ -82,7 +82,7 @@ main h2 {
     grid-template-columns: 1fr;
     grid-gap: 20px;
     place-items: center;
-    padding: 20px;
+    margin: 20px;
 }
 
 .card {
