@@ -35,11 +35,13 @@ const products = [
     }
 ];
 
-const select = document.querySelector("#productName");
+const select = document.querySelector(".select");
 if (select) {
 select.innerHTML = `
-    <option value="" disabled selected>Select a Product ...</option>
-        ${products.map(product => `<option value="${product.id}">${product.name}</option>`).join("")}
+            <select name="productName" id="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+                ${products.map(product => `<option value="${product.id}">${product.name}</option>`).join("")}
+            </select>
     `;
 }
 

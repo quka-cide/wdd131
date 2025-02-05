@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="WDD 131 Product Review Form">
     <meta name="author" content="Vitalina Syzova">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Product Review Form</title>
     <link rel="stylesheet" href="./styles/form.css">
     <script src="./scripts/form.js" defer></script>
@@ -15,9 +18,9 @@
     </header>
     <main>
         <form method="get" action="review.html" class="form">
-            <label for="productName">Product Name</label>
-            <select name="productName" id="productName" required>
-            </select>
+            <div>Product Name</div>
+            <div class="select">
+            </div>
             <div>Overall Rating</div>
             <div class="star-rating">
                 <input type="radio" id="star5" name="rating" value="5" />
