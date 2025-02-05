@@ -35,14 +35,18 @@ const products = [
     }
 ];
 
-const select = document.querySelector(".select");
+const select = document.querySelector("#productName");
 if (select) {
-select.innerHTML = `
-            <select name="productName" id="productName" required>
-                <option value="" disabled selected>Select a Product ...</option>
-                ${products.map(product => `<option value="${product.id}">${product.name}</option>`).join("")}
-            </select>
-    `;
+    const defaultOption = select.querySelector('option[value=""]');
+    select.innerHTML = '';
+    select.appendChild(defaultOption);
+
+    products.forEach(product => {
+        const option = document.createElement('option');
+        option.value = product.id;
+        option.textContent = product.name;
+        select.appendChild(option);
+    });
 }
 
 function getReviewCounter() {
