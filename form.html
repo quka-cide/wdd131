@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 Product Review Form">
+    <meta name="author" content="Vitalina Syzova">
+    <title>Product Review Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/form.css">
+    <script src="./scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="form">
+            <label for="productName">Product Name</label>
+            <select name="productName" id="productName" required>
+            </select>
+            <div>Overall Rating</div>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5">☆</label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4">☆</label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3">☆</label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2">☆</label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1">☆</label>
+            </div>
+            <label for="dateOfIns">Date of Installation</label>
+            <input type="date" name="dateOfIns" id="dateOfIns" required>
+            <div class="div-wrap">Which features did you find useful in the product?<span class="diff">(Check all that apply)</span></div>
+            <label for="uf1"><input type="checkbox" id="uf1" name="usefulFeatures" value="durability">Durability</label>
+            <label for="uf2"><input type="checkbox" id="uf2" name="usefulFeatures" value="easy of use">Ease of Use</label>
+            <label for="uf3"><input type="checkbox" id="uf3" name="usefulFeatures" value="performance">Performance</label>
+            <label for="uf4"><input type="checkbox" id="uf4" name="usefulFeatures" value="design">Design</label>
+            <label for="wr">Written Review <span class="optional">(Optional)</span></label>
+            <textarea name="writtenReview" id="wr"></textarea>
+            <label for="userName">Your Name <span class="optional">(Optional)</span></label>
+            <input type="text" id="userName" name="userName">
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Vitalina Syzova | Ukraine</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
