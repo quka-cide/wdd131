@@ -1,0 +1,306 @@
+:root {
+    --dark-grey: #2B2B2B;
+    --white: #fff;
+    --burnt-orange: #D96E30;
+    --rusty-red: #8B2F24;
+    --olive-green: #6A732A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quantico', sans-serif;
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+ header {
+    background-color: black;
+    color: var(--white);
+
+ }
+
+ nav {
+    margin: 1rem auto;
+ }
+ 
+ #menu {
+    font-size: 32px;
+    border: none;
+    color: var(--white);
+    background: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#menu::before {
+    content: "☰";
+    border: 0;
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navigation a {
+    width: 150px;
+    display: none;
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 24px;
+    transition: .5s;
+}
+
+.navigation a:hover {
+    color: var(--rusty-red);
+}
+
+.open {
+    padding: 0;
+}
+
+.open a {
+    display: block;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+main h2 {
+    color: #D7DEA6;
+    font-size: 32px;
+    padding-bottom: 10px;
+}
+
+main h3 {
+    color: #D7DEA6;
+    padding-top: 1rem;
+    font-size: 28px;
+}
+
+main p {
+    font-size: 20px;
+}
+
+main ul {
+    list-style: none;
+}
+
+main li {
+    padding: 5px;
+    font-size: 20px;
+}
+
+iframe {
+    margin: 20px;
+}
+
+.label {
+    font-weight: 700;
+}
+
+.card {
+    border: 1px solid var(--olive-green);
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.card p {
+    padding: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card a {
+    color: #D7DEA6;
+    text-decoration: none;
+}
+
+.table-container {
+    width: 80%;
+    margin: 20px auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #222;
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+tr:hover {
+    background-color: #3a3a3a;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: auto;
+    background: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.3);
+  }
+  
+  .question {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option {
+    background: #444;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .option:hover {
+    background: #ffcc00;
+    color: #000;
+    border-color: #fff;
+  }
+  
+  .option.selected {
+    background: #ff4500;
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  button {
+    background: #ffcc00;
+    color: #000;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background: #ffa500;
+  }
+  
+  #score {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #00ff00;
+  }
+
+  iframe {
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 20px;
+    background-color: black;
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    .navigation {
+        flex-direction: row;
+    }
+
+    .navigation a {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    main {
+        max-width: 2000px;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 400px;
+        height: auto;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    iframe {
+        width: 1000px;
+        height: 500px;
+    }
+
+    .quiz-container {
+        width: 90%;
+        padding: 15px;
+      }
+    
+      .option {
+        font-size: 1em;
+        padding: 8px;
+      }
+    
+      button {
+        font-size: 1em;
+      }
+}
